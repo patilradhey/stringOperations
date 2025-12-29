@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>stringOperations</title>
+</head>
+
+<body>
+    <h1 class="text-bold bg-primary py-2 text-center text-white">Operations on String in Javascript</h1>
+
+
+    <div class="container my-4">
+        <div class="form-floating w-60 mx-auto ">
+            <textarea class="form-control" placeholder="Add a Paragraph" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Add Paragraph</label>
+        </div>
+
+    </div>
+
+    <div class="container bg-secondary w-50 mx-auto text-white p-2 text-center fw-bold fs-2" id="result" style="height: 100px;">
+        Result 
+    </div>
+
+    <div class="container my-4 w-50 mx-auto">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-outline-dark mb-3" onclick="toCapitalise()">Capitalise</button> <br/>
+                <button class="btn btn-outline-dark  mb-3" onclick="countVowel()">Count Vowel</button> <br/>
+                <button class="btn btn-outline-dark  mb-3" onclick="countConsonants()">Count Consonents</button> <br/>
+                <button class="btn btn-outline-dark  mb-3">Exreact First Word</button> <br/>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark  mb-3" onclick="convertSmall()">Covert to small case</button> <br/>
+                <button class="btn btn-outline-dark  mb-3"> Convert to Title Case</button> <br/>
+                <button class="btn btn-outline-dark  mb-3" onclick="countSpaces()">Count Spaces</button> <br/>
+                <button class="btn btn-outline-dark  mb-3"> Count new lines</button> <br/>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark  mb-3" onclick="replaceSpacesWithHyphen()">Replace all spaces with hypen</button> <br/>
+                <button class="btn btn-outline-dark  mb-3"> Sort the words</button> <br/>
+                <button class="btn btn-outline-dark  mb-3">Reverse the characters</button> <br/>
+                <button class="btn btn-outline-dark  mb-3"> Check Palindrome</button> <br/>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark  mb-3">Count the Words</button> <br/>
+                <!-- <button class="btn btn-outline-dark  mb-3"> Convert to Title Case</button> <br/>
+                <button class="btn btn-outline-dark  mb-3">Count Spaces</button> <br/>
+                <button class="btn btn-outline-dark  mb-3"> Count new lines</button> <br/> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Custom Javascript Link -->
+    <script src="./script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
