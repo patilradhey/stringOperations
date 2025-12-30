@@ -99,3 +99,17 @@ function countNewLines(){
 }
 
 
+function countWords(){
+
+    paragraph = inputElmt.value;
+    let count = 0
+    for (let i = 0; i < paragraph.length; i++) {
+        if (paragraph[i] == " ")
+            count++
+    }
+    document.getElementById("result").innerHTML = 'total words are: ' + (count + 1)
+}
+
+
+
+
