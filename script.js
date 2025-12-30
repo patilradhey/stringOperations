@@ -85,3 +85,16 @@ function replaceSpacesWithHyphen(){
 
     resultElmt.innerHTML = updatedPara;
 }
+
+function countNewLines(){
+    paragraph = inputElmt.value;
+
+    count = 0;
+    for(i = 0; i < paragraph.length; i++){
+        if(paragraph[i] === "\n"){
+            count++;
+        }
+    }
+    resultElmt.innerHTML = "Count of new lines : " + count;
+}
+
