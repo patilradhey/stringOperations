@@ -111,5 +111,11 @@ function countWords(){
 }
 
 
-
+function checkPalindrome(){
+    if(paragraph == revstr){
+  document.getElementById("result").innerHTML = "palindrome"
+}else{
+  document.getElementById("result").innerHTML = "not palindrome"
+}
+}
 
