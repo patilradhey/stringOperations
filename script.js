@@ -1,4 +1,4 @@
-function toCapitalise(){
+function toCapitalise() {
     paragraph = document.getElementById("floatingTextarea2").value
     console.log(paragraph)
 
@@ -14,40 +14,40 @@ function toCapitalise(){
 const inputElmt = document.getElementById("floatingTextarea2");
 const resultElmt = document.getElementById("result");
 
-function countVowel(){
-  paragraph = inputElmt.value;
-    
-  count = 0;
-  for (i = 0; i < paragraph.length; i++) {
-    if (
-      paragraph[i] == "a" ||
-      paragraph[i] == "e" ||
-      paragraph[i] == "i" ||
-      paragraph[i] == "o" ||
-      paragraph[i] == "u" ||
-      paragraph[i] == "A" ||
-      paragraph[i] == "E" ||
-      paragraph[i] == "I" ||
-      paragraph[i] == "O" ||
-      paragraph[i] == "U"
-    ) {
-      count++;
-    }
-    }
-    resultElmt.innerHTML = "Count of vowels : "+ count;
-}
- 
-function countConsonants(){
+function countVowel() {
     paragraph = inputElmt.value;
 
     count = 0;
-    for(i = 0; i < paragraph.length; i++){
+    for (i = 0; i < paragraph.length; i++) {
+        if (
+            paragraph[i] == "a" ||
+            paragraph[i] == "e" ||
+            paragraph[i] == "i" ||
+            paragraph[i] == "o" ||
+            paragraph[i] == "u" ||
+            paragraph[i] == "A" ||
+            paragraph[i] == "E" ||
+            paragraph[i] == "I" ||
+            paragraph[i] == "O" ||
+            paragraph[i] == "U"
+        ) {
+            count++;
+        }
+    }
+    resultElmt.innerHTML = "Count of vowels : " + count;
+}
+
+function countConsonants() {
+    paragraph = inputElmt.value;
+
+    count = 0;
+    for (i = 0; i < paragraph.length; i++) {
         ch = paragraph[i];
 
-        if( (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') ){
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
 
-            if( !(ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u" ||
-                  ch == "A" || ch == "E" || ch == "I" || ch == "O" || ch == "U") ){
+            if (!(ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u" ||
+                ch == "A" || ch == "E" || ch == "I" || ch == "O" || ch == "U")) {
                 count++;
             }
         }
@@ -56,7 +56,7 @@ function countConsonants(){
 }
 
 
-function convertSmall(){
+function convertSmall() {
     paragraph = inputElmt.value;
 
     paraInSmall = paragraph.toLowerCase();
@@ -65,12 +65,12 @@ function convertSmall(){
 }
 
 
-function countSpaces(){
+function countSpaces() {
     paragraph = inputElmt.value;
 
     count = 0;
-    for(i = 0; i < paragraph.length; i++){
-        if(paragraph[i] == " "){
+    for (i = 0; i < paragraph.length; i++) {
+        if (paragraph[i] == " ") {
             count++;
         }
     }
@@ -78,7 +78,7 @@ function countSpaces(){
 }
 
 
-function replaceSpacesWithHyphen(){
+function replaceSpacesWithHyphen() {
     paragraph = inputElmt.value;
 
     updatedPara = paragraph.replaceAll(" ", "-");
@@ -86,12 +86,12 @@ function replaceSpacesWithHyphen(){
     resultElmt.innerHTML = updatedPara;
 }
 
-function countNewLines(){
+function countNewLines() {
     paragraph = inputElmt.value;
 
     count = 0;
-    for(i = 0; i < paragraph.length; i++){
-        if(paragraph[i] == "\n"){
+    for (i = 0; i < paragraph.length; i++) {
+        if (paragraph[i] == "\n") {
             count++;
         }
     }
@@ -99,7 +99,7 @@ function countNewLines(){
 }
 
 
-function countWords(){
+function countWords() {
 
     paragraph = inputElmt.value;
     let count = 0
@@ -111,11 +111,58 @@ function countWords(){
 }
 
 
-function checkPalindrome(){
-    if(paragraph == revstr){
-  document.getElementById("result").innerHTML = "palindrome"
-}else{
-  document.getElementById("result").innerHTML = "not palindrome"
-}
+const palindromCheck = () => {
+    str = document.getElementById("floatingTextarea2").value
+    revStr = ''
+    for (i = str.length - 1; i >= 0; i--) {
+        console.log(i)
+        console.log(str[i])
+        revStr = revStr + str[i]
+        console.log(revStr)
+    }
+
+    if (str == revStr) {
+        document.getElementById("result").innerHTML = "palindrom"
+    } else {
+        document.getElementById("result").innerHTML = "Not Palindrom"
+    }
 }
 
+const  reverseTheChars = () =>{
+ str = document.getElementById("floatingTextarea2").value
+revStr = ''
+for(i=str.length -1; i>=0;i--){
+    console.log(i)
+    console.log(str[i])
+    revStr = revStr+str[i]
+    console.log(revStr)
+}
+document.getElementById("result").innerHTML = revStr 
+}
+
+function extractFirstWord(){
+
+
+ paragraph = document.getElementById("floatingTextarea2").value
+
+ firstWord = paragraph.split(" ")[0];
+
+document.getElementById("result").innerHTML = firstWord 
+
+}
+
+function convertTitleCase() {
+    
+
+      let paragraph = document.getElementById("floatingTextarea2").value;
+      let words = paragraph.toLowerCase().split(" ");
+      let titleCase = "";
+
+      for (let i = 0; i < words.length; i++) {
+        titleCase +=
+          words[i].charAt(0).toUpperCase() +
+          words[i].slice(1) + " ";
+      }
+
+      document.getElementById("result").innerHTML = titleCase.trim();
+    }
